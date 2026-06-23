@@ -1,0 +1,85 @@
+/* Import existing styles first */
+@import '../style.css';
+@import '../booking-style.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   Brand Accent — Global Theming
+   #f9ffd6 champagne accent applied across:
+   native form controls, scrollbar, text selection
+   ============================================ */
+@layer base {
+    html {
+        /* Native form controls (checkboxes, radios, range, progress) */
+        accent-color: #f9ffd6;
+
+        /* Firefox scrollbar */
+        scrollbar-color: #f9ffd6 #171717;
+        scrollbar-width: thin;
+    }
+
+    /* Webkit / Chromium scrollbar */
+    ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+    ::-webkit-scrollbar-track {
+        background: #171717;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #f9ffd6;
+        border: 2px solid #171717;
+        border-radius: 999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #ffffff;
+    }
+    ::-webkit-scrollbar-corner {
+        background: #171717;
+    }
+
+    /* Text selection */
+    ::selection {
+        background: #f9ffd6;
+        color: #171717;
+    }
+    ::-moz-selection {
+        background: #f9ffd6;
+        color: #171717;
+    }
+
+    /* Default focus ring uses accent for interactive elements */
+    :focus-visible {
+        outline: 2px solid #f9ffd6;
+        outline-offset: 2px;
+    }
+
+    /* sr-only utility (Tailwind base includes this, but redefined here for safety) */
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+    }
+    .focus\:not-sr-only:focus,
+    .focus\:not-sr-only:focus-within {
+        position: static;
+        width: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        clip: auto;
+        white-space: normal;
+    }
+}
+
+
+

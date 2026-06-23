@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="BrideVoy — Mercedes-Benz S-Class Wedding Chauffeur in Lagos">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#171717"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </linearGradient>
+    <linearGradient id="title" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#b8b8b8"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="60%" stop-color="#c8c8c8"/>
+      <stop offset="100%" stop-color="#5a5a5a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <line x1="0" y1="500" x2="1200" y2="500" stroke="#f9ffd6" stroke-width="2" opacity="0.4"/>
+
+  <text x="100" y="190" font-family="Cinzel, serif" font-size="170" font-weight="700" fill="url(#title)" letter-spacing="6">BRIDEVOY</text>
+  <text x="100" y="245" font-family="Raleway, sans-serif" font-size="22" font-weight="500" fill="#f9ffd6" letter-spacing="14">THE ART OF GRAND ARRIVAL</text>
+
+  <text x="100" y="370" font-family="Cinzel, serif" font-size="48" font-weight="400" fill="#ffffff" letter-spacing="2">Mercedes-Benz S-Class</text>
+  <text x="100" y="420" font-family="Raleway, sans-serif" font-size="32" font-weight="300" fill="#cfcfcf" letter-spacing="1">Wedding Chauffeur · Lagos</text>
+
+  <text x="100" y="560" font-family="Raleway, sans-serif" font-size="20" font-weight="500" fill="#f9ffd6" letter-spacing="6">RESERVE YOUR DATE  ·  bridevoy.com</text>
+
+  <circle cx="1080" cy="315" r="60" fill="none" stroke="#f9ffd6" stroke-width="1.5" opacity="0.6"/>
+  <text x="1080" y="328" font-family="Cinzel, serif" font-size="46" font-weight="600" fill="#f9ffd6" text-anchor="middle">B</text>
+</svg>
