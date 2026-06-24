@@ -8,19 +8,31 @@ import { useEffect, useState } from 'react';
  * OS-level "prefers-reduced-motion: reduce".
  */
 export function useReducedMotion() {
-    const [reduced, setReduced] = useState(false);
+    const [reduced, setReduced] = useState(() => {
+        if (typeof window === 'undefined') return false;
+        const osReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const isMobile = window.innerWidth < 768;
+        return osReduced || isMobile;
+    });
 
     useEffect(() => {
         if (typeof window === 'undefined') return undefined;
         const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
-        const update = () => setReduced(mq.matches);
+        
+        const update = () => {
+            const isMobile = window.innerWidth < 768;
+            setReduced(mq.matches || isMobile);
+        };
+        
         update();
-        // Both modern and legacy event names for older browsers.
         mq.addEventListener?.('change', update);
         mq.addListener?.(update);
+        window.addEventListener('resize', update);
+        
         return () => {
             mq.removeEventListener?.('change', update);
             mq.removeListener?.(update);
+            window.removeEventListener('resize', update);
         };
     }, []);
 

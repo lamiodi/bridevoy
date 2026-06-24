@@ -40,16 +40,17 @@ export default function MeetBrideVoyIntro() {
     // Show the card after the preloader finishes + a small grace delay.
     useEffect(() => {
         if (isDismissedRecently()) return;
-        // Wait for preloader to clear (~1.2s) plus 1.5s grace so the
-        // first impression is the hero, not the card.
-        const t = setTimeout(() => setVisible(true), 2700);
+        // Wait for preloader to clear plus a generous 7-second grace period
+        // so the user has time to read the hero section before the intro card appears.
+        const t = setTimeout(() => setVisible(true), 7000);
         return () => clearTimeout(t);
     }, []);
 
     // After the card opens, push focus to the close button for keyboard users.
+    // preventScroll: true is CRITICAL so the browser doesn't jump the page to the bottom.
     useEffect(() => {
         if (visible && closeBtnRef.current) {
-            const id = setTimeout(() => closeBtnRef.current?.focus(), 100);
+            const id = setTimeout(() => closeBtnRef.current?.focus({ preventScroll: true }), 100);
             return () => clearTimeout(id);
         }
         return undefined;

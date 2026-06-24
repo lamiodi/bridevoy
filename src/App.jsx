@@ -52,13 +52,20 @@ export default function App() {
         setIsLoading(false);
     }, []);
 
-    // Skip preloader if reduced motion preferred (in case the initial
-    // check above missed it because of timing).
+    // Skip preloader if reduced motion preferred
     useEffect(() => {
         if (prefersReduced && isLoading) {
             setIsLoading(false);
         }
     }, [prefersReduced, isLoading]);
+
+    // Ensure the page always loads at the top on refresh
+    useEffect(() => {
+        if ('scrollRestoration' in window.history) {
+            window.history.scrollRestoration = 'manual';
+        }
+        window.scrollTo(0, 0);
+    }, []);
 
     // Fallback smooth scroll handler for hash links
     useEffect(() => {
@@ -94,29 +101,27 @@ export default function App() {
                         )}
                     </AnimatePresence>
 
-                    <AnimatePresence>
-                        {!isLoading && (
-                            <>
-                                <Navbar />
+                    {!isLoading && (
+                        <>
+                            <Navbar />
 
-                                <main id="main-content">
-                                    <Hero />
-                                    <About />
-                                    <WhyChooseUs />
-                                    <Testimonials />
-                                    <MissionVision />
-                                    <HowItWorks />
-                                    <AfterSubmit />
-                                    <FAQ />
-                                    <BookingWizard />
-                                </main>
+                            <main id="main-content">
+                                <Hero />
+                                <About />
+                                <WhyChooseUs />
+                                <Testimonials />
+                                <MissionVision />
+                                <HowItWorks />
+                                <AfterSubmit />
+                                <FAQ />
+                                <BookingWizard />
+                            </main>
 
-                                <Footer />
-                                <WhatsAppButton />
-                                <MeetBrideVoyIntro />
-                            </>
-                        )}
-                    </AnimatePresence>
+                            <Footer />
+                            <WhatsAppButton />
+                            <MeetBrideVoyIntro />
+                        </>
+                    )}
                 </div>
             </ToastProvider>
         </ErrorBoundary>
