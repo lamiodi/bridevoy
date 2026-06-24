@@ -55,7 +55,7 @@ export default function Testimonials() {
                     className="flex items-center justify-center gap-4 mb-8"
                     initial={!prefersReduced ? { opacity: 0 } : false}
                     whileInView={{ opacity: 1 }}
-                    viewport={{ once: true, amount: 0.5 }}
+                    viewport={{ once: true, amount: 0.2 }}
                     transition={{ duration: 0.5 }}
                     aria-hidden="true"
                 >

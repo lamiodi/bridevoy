@@ -6,6 +6,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Prevent flash of white/unstyled content before JS loads */
+html,
+body,
+#root {
+    background-color: #171717;
+    min-height: 100vh;
+}
+
 /* ============================================
    Brand Accent — Global Theming
    #f9ffd6 champagne accent applied across:

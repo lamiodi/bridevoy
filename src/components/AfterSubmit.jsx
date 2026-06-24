@@ -40,7 +40,7 @@ export default function AfterSubmit() {
                     } : undefined}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true, amount: 0.3 }}
+                    viewport={{ once: true, amount: 0.1 }}
                 >
                     <p className="font-body text-[10px] tracking-[0.4em] uppercase text-[#171717]/60 mb-3">
                         What happens after
@@ -63,7 +63,7 @@ export default function AfterSubmit() {
                             className="relative bg-white border border-[#EAEAEA] p-6 sm:p-7 text-left shadow-sm hover:shadow-md transition-shadow"
                             initial={!prefersReduced ? { opacity: 0, y: 12 } : false}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, amount: 0.3 }}
+                            viewport={{ once: true, amount: 0.1 }}
                             transition={{ duration: 0.4, delay: i * 0.08 }}
                         >
                             <span

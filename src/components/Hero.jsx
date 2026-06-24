@@ -17,12 +17,12 @@ export default function Hero() {
 
     // Mobile-tuned motion values: smaller offsets + tighter timing.
     const titleMotion = isMobile
-        ? { initial: { opacity: 0, scale: 0.97 }, animate: { opacity: 1, scale: 1 }, transition: { duration: 0.7, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] } }
-        : { initial: { opacity: 0, scale: 0.95 }, animate: { opacity: 1, scale: 1 }, transition: { duration: 1, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] } };
+        ? { initial: { opacity: 0, scale: 0.97 }, animate: { opacity: 1, scale: 1 }, transition: { duration: 0.5, delay: 0.05, ease: [0.25, 0.46, 0.45, 0.94] } }
+        : { initial: { opacity: 0, scale: 0.95 }, animate: { opacity: 1, scale: 1 }, transition: { duration: 0.6, delay: 0.05, ease: [0.25, 0.46, 0.45, 0.94] } };
 
     const carMotion = isMobile
-        ? { initial: { opacity: 0, y: 24 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.55, delay: 0.25, ease: [0.25, 0.46, 0.45, 0.94] } }
-        : { initial: { opacity: 0, y: 40 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.8, delay: 0.5, ease: [0.25, 0.46, 0.45, 0.94] } };
+        ? { initial: { opacity: 0, y: 16 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.45, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] } }
+        : { initial: { opacity: 0, y: 24 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.6, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] } };
 
     const containerStagger = isMobile
         ? { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.08, delayChildren: 0.05 } } }

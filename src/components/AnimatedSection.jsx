@@ -12,12 +12,15 @@ export default function AnimatedSection({
     id,
     as = 'section',
     variants = staggerContainer,
+    visible = false,
     ...rest
 }) {
     const prefersReduced = useReducedMotion();
     const Component = motion[as] || motion.section;
 
-    if (prefersReduced) {
+    // If section is marked visible (above-the-fold) or user prefers
+    // reduced motion, render without scroll-triggered animation.
+    if (prefersReduced || visible) {
         const Tag = as;
         return (
             <Tag className={className} id={id} {...rest}>

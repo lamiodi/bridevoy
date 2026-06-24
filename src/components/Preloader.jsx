@@ -77,7 +77,7 @@ export default function Preloader({ onComplete }) {
                 <motion.div
                     initial={{ width: '0%' }}
                     animate={{ width: '100%' }}
-                    transition={{ duration: 2.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+                    transition={{ duration: 1.5, ease: [0.25, 0.46, 0.45, 0.94] }}
                     onAnimationComplete={onComplete}
                     style={{
                         height: '100%',

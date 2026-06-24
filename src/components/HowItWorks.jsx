@@ -40,7 +40,7 @@ export default function HowItWorks() {
                     className="flex items-center justify-center gap-4 mb-14"
                     initial={!prefersReduced ? { opacity: 0 } : false}
                     whileInView={{ opacity: 1 }}
-                    viewport={{ once: true, amount: 0.5 }}
+                    viewport={{ once: true, amount: 0.2 }}
                     transition={{ duration: 0.5 }}
                 >
                     <div className="h-px w-16 sm:w-24 bg-white/15" />

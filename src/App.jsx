@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -17,7 +17,6 @@ import MeetBrideVoyIntro from './components/MeetBrideVoyIntro';
 import ErrorBoundary from './components/ErrorBoundary';
 import DynamicSEO from './components/DynamicSEO';
 import { ToastProvider } from './components/Toast';
-import { pageTransition } from './utils/animations';
 import { useReducedMotion } from './utils/useReducedMotion';
 import { STORAGE_KEYS } from './constants';
 
@@ -97,13 +96,7 @@ export default function App() {
 
                     <AnimatePresence>
                         {!isLoading && (
-                            <motion.div
-                                key="main-app"
-                                variants={pageTransition}
-                                initial="initial"
-                                animate="animate"
-                                exit="exit"
-                            >
+                            <>
                                 <Navbar />
 
                                 <main id="main-content">
@@ -121,7 +114,7 @@ export default function App() {
                                 <Footer />
                                 <WhatsAppButton />
                                 <MeetBrideVoyIntro />
-                            </motion.div>
+                            </>
                         )}
                     </AnimatePresence>
                 </div>

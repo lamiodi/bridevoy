@@ -106,8 +106,8 @@ export const buttonTap = {
 // ---------- Viewport Trigger Defaults ----------
 export const viewportOnce = {
     once: true,
-    margin: '-60px',
-    amount: 0.15,
+    margin: '0px',
+    amount: 0.1,
 };
 
 // ---------- Page Transition Variants ----------
