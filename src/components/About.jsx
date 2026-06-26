@@ -44,6 +44,7 @@ export default function About() {
                                 variants={!prefersReduced ? staggerChild : undefined}
                             >
                                 <h3 className="font-heading text-sm uppercase tracking-[0.2em] text-white mb-4">Our Available Cars</h3>
+                                {/* Mercedes-Benz S-Class — Available */}
                                 <div className="flex items-center gap-4">
                                     <div className="w-12 h-12 rounded-full bg-[#2a2a2a] border border-[#444] flex items-center justify-center shrink-0">
                                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f9ffd6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -60,6 +61,28 @@ export default function About() {
                                     <span className="hidden sm:inline-flex items-center gap-1.5 font-body text-[10px] tracking-[0.2em] uppercase text-[#f9ffd6] bg-[#f9ffd6]/10 px-3 py-1.5 rounded-full border border-[#f9ffd6]/20">
                                         <span className="w-1.5 h-1.5 rounded-full bg-[#f9ffd6]" aria-hidden="true" />
                                         Available
+                                    </span>
+                                </div>
+
+                                {/* Divider */}
+                                <div className="my-4 border-t border-[#333]" />
+
+                                {/* Other Fleet Vehicles — Unavailable */}
+                                <div className="flex items-center gap-4 opacity-60">
+                                    <div className="w-12 h-12 rounded-full bg-[#2a2a2a] border border-[#444] flex items-center justify-center shrink-0">
+                                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#888" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                                            <path d="M5 17h14M5 17l-1-5a2 2 0 0 1 .5-1.7L7 8h10l2.5 2.3A2 2 0 0 1 20 12l-1 5" />
+                                            <circle cx="7" cy="17" r="1.5" />
+                                            <circle cx="17" cy="17" r="1.5" />
+                                            <path d="M9 17v2M15 17v2" />
+                                        </svg>
+                                    </div>
+                                    <div className="flex-1 min-w-0">
+                                        <p className="font-body text-white text-sm tracking-wide">Other Fleet Vehicles</p>
+                                        <p className="font-body text-gray-500 text-[11px] tracking-[0.15em] uppercase mt-0.5">Sedans & SUVs · Temporarily Unavailable</p>
+                                    </div>
+                                    <span className="hidden sm:inline-flex items-center gap-1.5 font-body text-[10px] tracking-[0.2em] uppercase text-[#888] bg-[#888]/10 px-3 py-1.5 rounded-full border border-[#888]/20">
+                                        Unavailable
                                     </span>
                                 </div>
                             </motion.div>
