@@ -1,6 +1,6 @@
 // ============================================
 // BrideVoy — Hero Section
-// Brand statement + S-Class visual + dual CTAs
+// Brand statement + fleet visual + dual CTAs
 // ============================================
 import { motion } from 'framer-motion';
 import {
@@ -176,7 +176,7 @@ export default function Hero() {
                         </div>
                         <div className="lg:absolute lg:top-[125px] lg:right-0 mt-1 lg:mt-0">
                             <p className="font-body text-xs lg:text-[14px] text-[#171717]/70 tracking-[0.05em] font-light whitespace-nowrap">
-                                S-Class Chauffeur Fleet
+                                Our Fleet
                             </p>
                         </div>
                     </motion.div>

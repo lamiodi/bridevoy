@@ -7,7 +7,7 @@
 // in the navbar, not a regular nav item.
 export const NAV_LINKS = [
     { label: 'HOME', href: '#home' },
-    { label: 'THE S-CLASS', href: '#fleet' },
+    { label: 'THE FLEET', href: '#fleet' },
     { label: 'PROCESS', href: '#process' },
     { label: 'FAQ', href: '#faq' },
 ];
@@ -106,7 +106,7 @@ export const FAQ_ITEMS = [
     },
     {
         q: 'Can we see the car before booking?',
-        a: 'Yes. Subject to availability, we can arrange a quick 15-minute viewing of the S-Class at a Lagos location convenient to you.',
+        a: 'Yes. Subject to availability, we can arrange a quick 15-minute viewing of our fleet vehicle at a Lagos location convenient to you.',
     },
     {
         q: 'What is your cancellation policy?',
@@ -169,7 +169,7 @@ export const TESTIMONIALS = [
 
 export const FOOTER_LINKS = [
     { label: 'HOME', href: '#home' },
-    { label: 'THE S-CLASS', href: '#fleet' },
+    { label: 'THE FLEET', href: '#fleet' },
     { label: 'PROCESS', href: '#process' },
     { label: 'FAQ', href: '#faq' },
 ];

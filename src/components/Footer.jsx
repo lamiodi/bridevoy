@@ -95,7 +95,7 @@ export default function Footer() {
                             </span>
                         </div>
                         <p className="font-body text-sm text-white/65 leading-relaxed max-w-xs">
-                            Mercedes-Benz S-Class wedding chauffeur in Lagos. Calm coordination, elegant presentation, and a single car given our full attention.
+                            Luxury wedding chauffeur in Lagos. Calm coordination, elegant presentation, and a single car given our full attention.
                         </p>
 
                         {/* Social row */}

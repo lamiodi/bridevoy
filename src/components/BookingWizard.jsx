@@ -885,7 +885,7 @@ export default function BookingWizard() {
                     Reserve Your Date
                 </h2>
                 <p className="font-body text-sm md:text-base text-gray-500 max-w-lg mx-auto">
-                    Share your event details and we&apos;ll respond with availability and a tailored quote — {RESPONSE_TIME}.
+                    Share your event details and we&apos;ll respond with availability and a tailored quote — Reply within 4 business hours.
                 </p>
             </motion.div>
 

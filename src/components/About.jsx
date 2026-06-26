@@ -37,6 +37,33 @@ export default function About() {
                             variants={!prefersReduced ? staggerChild : undefined}
                         >
                             <p>BrideVoy is a Lagos-based chauffeur service built for weddings, executive movements, and unforgettable arrivals. We bring calm coordination, elegant presentation, and precise timing to every booking.</p>
+
+                            {/* Available Fleet Card */}
+                            <motion.div
+                                className="my-8 p-5 border border-[#333] bg-[#1e1e1e] rounded-lg"
+                                variants={!prefersReduced ? staggerChild : undefined}
+                            >
+                                <h3 className="font-heading text-sm uppercase tracking-[0.2em] text-white mb-4">Our Available Cars</h3>
+                                <div className="flex items-center gap-4">
+                                    <div className="w-12 h-12 rounded-full bg-[#2a2a2a] border border-[#444] flex items-center justify-center shrink-0">
+                                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f9ffd6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                                            <path d="M5 17h14M5 17l-1-5a2 2 0 0 1 .5-1.7L7 8h10l2.5 2.3A2 2 0 0 1 20 12l-1 5" />
+                                            <circle cx="7" cy="17" r="1.5" />
+                                            <circle cx="17" cy="17" r="1.5" />
+                                            <path d="M9 17v2M15 17v2" />
+                                        </svg>
+                                    </div>
+                                    <div className="flex-1 min-w-0">
+                                        <p className="font-body text-white text-sm tracking-wide">Mercedes-Benz S-Class</p>
+                                        <p className="font-body text-gray-400 text-[11px] tracking-[0.15em] uppercase mt-0.5">2022 · Chauffeur-Driven</p>
+                                    </div>
+                                    <span className="hidden sm:inline-flex items-center gap-1.5 font-body text-[10px] tracking-[0.2em] uppercase text-[#f9ffd6] bg-[#f9ffd6]/10 px-3 py-1.5 rounded-full border border-[#f9ffd6]/20">
+                                        <span className="w-1.5 h-1.5 rounded-full bg-[#f9ffd6]" aria-hidden="true" />
+                                        Available
+                                    </span>
+                                </div>
+                            </motion.div>
+
                             <p>Our Mercedes-Benz S-Class experience is reserved for clients who value comfort, discretion, and punctuality in a city where the smallest delay matters. BrideVoy turns transportation into part of the celebration itself.</p>
                         </motion.div>
 
@@ -80,7 +107,7 @@ export default function About() {
                 >
                     {/* Car image with refined frame */}
                     <div className="relative w-full max-w-[800px] mx-auto aspect-[3/2] overflow-hidden border border-[#2a2a2a] shadow-[0_20px_60px_rgba(0,0,0,0.5)] group">
-                        <img src="/image.png" alt="Mercedes-Benz S-Class front view" className=" w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+                        <img src="/image.png" alt="Luxury fleet vehicle front view" className=" w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" loading="lazy" />
                         {/* Subtle gradient overlay for depth */}
                         <div className="absolute inset-0 bg-gradient-to-t from-[#171717]/40 via-transparent to-transparent pointer-events-none" aria-hidden="true" />
                         {/* Corner accents */}
@@ -93,7 +120,7 @@ export default function About() {
                         <p className="font-body text-gray-400 text-sm tracking-wider">
                             <span className="text-white font-semibold text-lg">{weddingCount}+</span> Weddings Completed
                         </p>
-                        <p className="font-body text-gray-400 text-sm tracking-wider mt-1">S-Class Chauffeur Fleet</p>
+                        <p className="font-body text-gray-400 text-sm tracking-wider mt-1">Our Fleet</p>
                     </div>
 
                     {/* Enhanced trust line with planner names strip */}

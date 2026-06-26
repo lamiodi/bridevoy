@@ -164,7 +164,7 @@ export default function MeetBrideVoyIntro() {
                                         <li className="flex gap-2">
                                             <span style={{ color: ACCENT }} aria-hidden="true">•</span>
                                             <span>
-                                                <span className="text-white/85">Mercedes-Benz S-Class fleet</span>
+                                                <span className="text-white/85">Our fleet</span>
                                                 {' '}— chauffeur-driven, immaculately presented, fully insured.
                                             </span>
                                         </li>
