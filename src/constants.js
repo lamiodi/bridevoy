@@ -105,10 +105,6 @@ export const FAQ_ITEMS = [
         a: 'Yes. A standby chauffeur can be added to any booking on request, ideal for multi-day or large-scale events.',
     },
     {
-        q: 'Can we see the car before booking?',
-        a: 'Yes. Subject to availability, we can arrange a quick 15-minute viewing of our fleet vehicle at a Lagos location convenient to you.',
-    },
-    {
         q: 'What is your cancellation policy?',
         a: 'Cancellations made 30+ days before the event receive a full caution-fee refund. Within 30 days, a 50% retention applies to cover reservation costs.',
     },
