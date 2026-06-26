@@ -3,6 +3,7 @@
 // 3 columns: brand, navigation, contact + social.
 // Service areas + Privacy link added.
 // ============================================
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
     FOOTER_LINKS,
@@ -42,9 +43,42 @@ const PhoneIcon = ({ size = 16, className = '' }) => (
     </svg>
 );
 
+const CopyIcon = ({ size = 14, className = '' }) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className={className}>
+        <rect x="9" y="9" width="13" height="13" rx="2" />
+        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+    </svg>
+);
+
+const CheckIcon = ({ size = 14, className = '' }) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className={className}>
+        <polyline points="20 6 9 17 4 12" />
+    </svg>
+);
+
 export default function Footer() {
     const prefersReduced = useReducedMotion();
     const year = new Date().getFullYear();
+    const [copied, setCopied] = useState(false);
+
+    const handleCopyPhone = async () => {
+        const raw = BRAND_PHONE_DISPLAY.replace(/[^\d+]/g, '');
+        try {
+            await navigator.clipboard.writeText(raw);
+            setCopied(true);
+            setTimeout(() => setCopied(false), 2000);
+        } catch {
+            // fallback
+            const ta = document.createElement('textarea');
+            ta.value = raw;
+            document.body.appendChild(ta);
+            ta.select();
+            document.execCommand('copy');
+            document.body.removeChild(ta);
+            setCopied(true);
+            setTimeout(() => setCopied(false), 2000);
+        }
+    };
 
     return (
         <footer
@@ -193,7 +227,7 @@ export default function Footer() {
                                 </a>
                             </li>
                             {HAS_PHONE_CONFIG && (
-                                <li>
+                                <li className="flex items-center gap-2">
                                     <a
                                         href={`tel:${BRAND_PHONE_DISPLAY.replace(/[^\d+]/g, '')}`}
                                         className="inline-flex items-center gap-3 text-white/80 hover:text-white transition-colors"
@@ -201,6 +235,14 @@ export default function Footer() {
                                         <PhoneIcon size={16} className="text-white/50" />
                                         {BRAND_PHONE_DISPLAY}
                                     </a>
+                                    <button
+                                        type="button"
+                                        onClick={handleCopyPhone}
+                                        aria-label="Copy phone number"
+                                        className="inline-flex items-center justify-center w-7 h-7 rounded-full border border-white/20 text-white/60 hover:text-white hover:border-white/50 transition-colors"
+                                    >
+                                        {copied ? <CheckIcon size={13} className="text-[#f9ffd6]" /> : <CopyIcon size={13} />}
+                                    </button>
                                 </li>
                             )}
                             {HAS_WHATSAPP_CONFIG && (

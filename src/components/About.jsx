@@ -134,19 +134,7 @@ export default function About() {
                             Trusted by Lagos wedding planners<br className="lg:hidden" /> for premium chauffeur coordination
                         </p>
 
-                        {/* Planner name strip (placeholder — replace with real logo lockups) */}
-                        <ul
-                            className="mt-4 flex flex-wrap items-center justify-center lg:justify-end gap-x-5 gap-y-1 font-body text-[10px] tracking-[0.25em] uppercase text-[#888]"
-                            aria-label="Selected planner partners"
-                        >
-                            <li>Studio Adunni</li>
-                            <span aria-hidden="true" className="text-[#555]">·</span>
-                            <li>EF Events</li>
-                            <span aria-hidden="true" className="text-[#555]">·</span>
-                            <li>The Lagos Atelier</li>
-                            <span aria-hidden="true" className="text-[#555]">·</span>
-                            <li>+ many more</li>
-                        </ul>
+                        {/* Planner name strip — add real partner names here */}
                     </div>
                 </motion.div>
             </div>

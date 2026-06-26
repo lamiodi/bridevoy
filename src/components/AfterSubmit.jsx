@@ -83,7 +83,7 @@ export default function AfterSubmit() {
                 </div>
 
                 <p className="font-body text-[12px] text-[#171717]/60 text-center mt-8 max-w-md mx-auto">
-                    Typical response: Reply within 4 business hours on business days.
+                    Typical response: Reply within one hour on business days.
                 </p>
             </div>
         </AnimatedSection>
