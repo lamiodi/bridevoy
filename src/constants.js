@@ -51,7 +51,7 @@ export const JOURNEY_STEPS = [
     },
     {
         title: 'Choose Your Duration',
-        description: 'Select the 6-hour, 8-hour, or 12-hour duration and add-ons that match your timeline, presentation needs, and guest experience.',
+        description: 'Select the 6-hour, 12-hour, or 24-hour duration and add-ons that match your timeline, presentation needs, and guest experience.',
     },
     {
         title: 'Receive Your Quote',
@@ -119,17 +119,20 @@ export const FAQ_ITEMS = [
 ];
 
 export const DURATIONS = [
-    { label: '6-Hour Booking', startingFrom: '₦250,000' },
-    { label: '8-Hour Booking', startingFrom: '₦320,000' },
-    { label: '12-Hour Booking', startingFrom: '₦450,000' },
+    { label: '6-Hour Booking', startingFrom: '₦420,000' },
+    { label: '12-Hour Booking (Most Popular)', startingFrom: '₦650,000' },
+    { label: '24-Hour Full-Day Booking', startingFrom: '₦850,000' },
 ];
+
+export const OVERTIME_RATE = '₦50,000 per hour';
+export const OUT_OF_LAGOS_NOTE = 'Out-of-Lagos travel: Quoted separately.';
 
 // Addons now include a price hint so users know what changes the quote.
 export const ADDONS = [
     { label: 'Champagne Upgrade', name: 'champagne', from: '₦40,000' },
     { label: 'Security Escort', name: 'security', from: '₦80,000' },
     { label: 'Floral Upgrade', name: 'floral', from: '₦35,000' },
-    { label: 'Extra Stop', name: 'extra-stop', from: '₦15,000' },
+    { label: 'Extra Stop', name: 'extra-stop', from: '₦30,000' },
 ];
 
 // Expanded event-type options. The original two remain at the top
@@ -208,8 +211,8 @@ export const FORMSUBMIT_ENDPOINT = BRAND_EMAIL
     : '';
 
 // Booking commitments (used in hero + wizard success).
-export const RESPONSE_TIME = 'Reply within 4 business hours';
-export const STARTING_PRICE = '₦250,000';
+export const RESPONSE_TIME = 'Reply within 1 hour';
+export const STARTING_PRICE = '₦420,000';
 
 // Storage keys (used for autosave / preloader gating).
 export const STORAGE_KEYS = {

@@ -87,7 +87,8 @@ export default function About() {
                                 </div>
                             </motion.div>
 
-                            <p>Our Mercedes-Benz S-Class experience is reserved for clients who value comfort, discretion, and punctuality in a city where the smallest delay matters. BrideVoy turns transportation into part of the celebration itself.</p>
+                            <p>Our fleet experience is reserved for clients who value comfort, discretion, and punctuality in a city where the smallest delay matters. BrideVoy turns transportation into part of the celebration itself.</p>
+                            <p className="font-body text-gray-400 text-sm leading-relaxed mt-3">We do not drive through flooded or unsafe roads — your safety always comes first. Routes are assessed in advance, and alternatives are planned where necessary.</p>
                         </motion.div>
 
                         <motion.div

@@ -10,6 +10,8 @@ import AnimatedSection from './AnimatedSection';
 import {
     DURATIONS,
     ADDONS,
+    OVERTIME_RATE,
+    OUT_OF_LAGOS_NOTE,
     EVENT_TYPES,
     FORMSUBMIT_ENDPOINT,
     HAS_FORMSUBMIT_CONFIG,
@@ -562,6 +564,9 @@ export default function BookingWizard() {
                                 </option>
                             ))}
                         </select>
+                        <span className="font-body text-[11px] text-gray-500">
+                            Overtime billed at {OVERTIME_RATE} beyond your selected duration.
+                        </span>
                     </div>
 
                     <div className="flex flex-col gap-3">
@@ -609,6 +614,9 @@ export default function BookingWizard() {
                         <p className="font-body text-sm text-gray-600 leading-relaxed">
                             Final pricing is tailored to your route, duration, and add-ons. A fixed{' '}
                             <strong>₦300,000 caution fee</strong> applies to all bookings and is fully refundable after the rental. The caution fee is itemised on your formal invoice and is collected before your date is confirmed.
+                        </p>
+                        <p className="font-body text-[11px] text-gray-500 mt-3">
+                            {OUT_OF_LAGOS_NOTE} Overtime is billed at {OVERTIME_RATE}.
                         </p>
                     </div>
 
